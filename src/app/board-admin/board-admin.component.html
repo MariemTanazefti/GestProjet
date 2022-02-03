@@ -1,0 +1,77 @@
+<div class="container">
+  <header class="jumbotron">
+    <p>{{ content }}</p>
+  </header>
+  <div class="container" *ngIf="div1">
+    <h1 class="text-primary text-center">
+      Ajouter un nouveau Livre
+    </h1>
+    <form style="align-content: center;" #f="ngForm" (ngSubmit)="onSubmit(f.value)" novalidate>
+      <!-- 2 column grid layout with text inputs for the first and last names -->
+      <div class="row mb-4"></div>
+        <div class="col">
+          <div class="form-outline">
+            <label class="form-label" for="form6Example1">Title</label>
+            <input type="text" id="form6Example1" class="form-control" ngModel name="title" />
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <label class="form-label" for="form6Example2">Author</label>
+            <input type="text" id="form6Example2" class="form-control" ngModel name="author" />
+            
+          </div>
+        </div>
+      <div class="col">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form6Example3">Price</label>
+          <input type="number" id="form6Example3" class="form-control" ngModel name="price"/>
+         
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form6Example3">Photos: </label>
+          <input type="file" id="form6Example3"  name="photos" accept="image/png, image/jpeg"  (change)="getFiles($event)" />
+          <img th:src="/@{${user.photosImagePath}}" />
+        </div>
+      </div>
+    
+    
+    
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">Add Book</button>
+    </form>
+  </div>
+  
+  
+</div>
+<div class="container">
+  <h1 class="text-primary text-center">Liste des Livres </h1>
+  <div>
+    <table mdbTable responsive="true" class="table table-striped" >
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Price</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of allbook">
+          <td class="tg-0lax">{{book.id}} </td>
+          <td class="tg-0lax">{{book.title}} </td>
+          <td class="tg-0lax">{{book.author}} </td>
+          <td class="tg-0lax">{{book.price}} dt</td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm px-3"(click)="clickMethod(book.title,book.id)">
+              <i class="fa fa-trash" ></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

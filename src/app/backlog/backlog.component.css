@@ -1,0 +1,104 @@
+@media screen and (max-width:767px){/**tablette*/}
+@media screen and (max-width:575px){/**smartphone*/}
+
+p {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+li a {
+    display: block;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    color:black ;
+
+}
+
+h3{
+    color:#0A363F ;
+
+}
+
+p.active {
+    background-color: #FC7900;
+    border-radius: 7px;
+    
+}
+
+
+img {      
+    width : 38px;
+    
+    vertical-align: middle;
+  }
+
+  a:active{
+    color:#0A363F ;
+
+}
+
+#contenu {
+    margin-left:300px;
+    margin-top:40px;
+ }
+ #menu {
+    width:240px;
+    margin-left:20px;
+    margin-right:20px;
+    position:absolute;
+    border-radius: 7px;
+    }
+
+#contenu p{
+    color: gray;
+}
+#sb{
+    color: white;
+    background-color: #FC7900;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 5px ;
+    position: absolute;
+    border-radius: 7px;
+    right: 20%;
+    transform: translate(-20%);
+}
+
+#sprint p{
+    color: white;
+    margin-top: -60 px;
+}
+
+#sprint form #sb1{
+    color: white;
+    background-color: #FC7900;
+    text-align: center;
+    margin-top:-60px;
+    position: absolute;
+    border-radius: 7px;
+    right: 20%;
+    transform: translate(-20%);
+
+}
+
+#sprint{
+    background-color: #0A363F;
+    width:72%;
+    padding: 50px;
+    border-radius: 7px;
+    margin-top: 55px;   
+}
+#backlog{
+    background-color: #0A363F;
+    width:72%;
+    padding: 50px;
+    border-radius: 7px;
+    margin-top: 70px;   
+}
+
+#backlog p{
+    color: white;
+    margin-top: -60 px;
+}
